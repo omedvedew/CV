@@ -4,3 +4,31 @@
     align-content: center;
     align-items: center;
 }
+
+@mixin containerTitle {
+    .container-title {
+        display: grid;
+        grid-template-rows: 50px;
+        grid-template-columns: 35px auto;
+
+        .title-point {
+            display: grid;
+            width: 100%;
+            height: 100%;
+            background-color: #c5d7d7;
+            clip-path: polygon(0% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%);
+        }
+
+        .title-text {
+            display: grid;
+            height: 65%;
+            background-color: #62a6bd;
+            color: white;
+            padding-left: 20px;
+            font-size: 20px;
+            line-height: 40px;
+            font-weight: bold;
+            box-shadow: -10px 5px 12px 6px rgba(0, 0, 0, 0.7);
+        }
+    }
+}

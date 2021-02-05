@@ -5,5 +5,229 @@ body {
   grid-template-rows: auto;
   background-color: #e4e4e4;
 }
+body .wrapper {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 350px auto;
+  grid-template-rows: auto;
+  padding: 20px;
+}
+@media (max-width: 765px) {
+  body .wrapper {
+    grid-template-columns: auto;
+  }
+}
+body .wrapper .sidebar {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto auto auto;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+}
+body .wrapper .sidebar .photo-container {
+  display: grid;
+  width: 100%;
+  padding-top: 100%;
+  background-color: #272f43;
+  position: relative;
+}
+body .wrapper .sidebar .photo-container .photo {
+  display: grid;
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 10px solid #008fcc;
+  background-position-y: center;
+  background-position-x: 27%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body .wrapper .sidebar .contacts-container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  background-color: #3b3b3b;
+}
+body .wrapper .sidebar .contacts-container .container-title {
+  display: grid;
+  grid-template-rows: 50px;
+  grid-template-columns: 35px auto;
+}
+body .wrapper .sidebar .contacts-container .container-title .title-point {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  background-color: #c5d7d7;
+  clip-path: polygon(0% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%);
+}
+body .wrapper .sidebar .contacts-container .container-title .title-text {
+  display: grid;
+  height: 65%;
+  background-color: #62a6bd;
+  color: white;
+  padding-left: 20px;
+  font-size: 20px;
+  line-height: 40px;
+  font-weight: bold;
+  box-shadow: -10px 5px 12px 6px rgba(0, 0, 0, 0.7);
+}
+body .wrapper .sidebar .contacts-container .aside-items-container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  margin-bottom: 20px;
+}
+body .wrapper .sidebar .contacts-container .aside-items-container .aside-item {
+  display: grid;
+  grid-template-columns: 25px auto;
+  grid-template-rows: 35px;
+  align-items: center;
+  margin-left: 35px;
+}
+body .wrapper .sidebar .contacts-container .aside-items-container .aside-item .aside-item-img {
+  display: grid;
+  height: 25px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+body .wrapper .sidebar .contacts-container .aside-items-container .aside-item .address {
+  background-image: url(images/house.png);
+}
+body .wrapper .sidebar .contacts-container .aside-items-container .aside-item .phone {
+  background-image: url(images/telephone.png);
+}
+body .wrapper .sidebar .contacts-container .aside-items-container .aside-item .mail {
+  background-image: url(images/mail.png);
+}
+body .wrapper .sidebar .contacts-container .aside-items-container .aside-item .linked-in {
+  background-image: url(images/linkedin.png);
+}
+body .wrapper .sidebar .contacts-container .aside-items-container .aside-item .aside-item-text {
+  font-size: 14px;
+  padding-left: 10px;
+}
+body .wrapper .sidebar .contacts-container .aside-items-container .aside-item .aside-item-text a {
+  color: white;
+  text-decoration: none;
+}
+body .wrapper .sidebar .skills-container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  background-color: #3b3b3b;
+}
+body .wrapper .sidebar .skills-container .container-title {
+  display: grid;
+  grid-template-rows: 50px;
+  grid-template-columns: 35px auto;
+}
+body .wrapper .sidebar .skills-container .container-title .title-point {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  background-color: #c5d7d7;
+  clip-path: polygon(0% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%);
+}
+body .wrapper .sidebar .skills-container .container-title .title-text {
+  display: grid;
+  height: 65%;
+  background-color: #62a6bd;
+  color: white;
+  padding-left: 20px;
+  font-size: 20px;
+  line-height: 40px;
+  font-weight: bold;
+  box-shadow: -10px 5px 12px 6px rgba(0, 0, 0, 0.7);
+}
+body .wrapper .sidebar .skills-container .aside-items-container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  margin-bottom: 20px;
+}
+body .wrapper .sidebar .skills-container .aside-items-container .aside-item {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  align-items: center;
+  margin-left: 50px;
+}
+body .wrapper .sidebar .skills-container .aside-items-container .aside-item .aside-item-list {
+  list-style-type: square;
+  color: #0264ad;
+}
+body .wrapper .sidebar .skills-container .aside-items-container .aside-item .aside-item-list .aside-item-text {
+  font-size: 14px;
+  line-height: 35px;
+}
+body .wrapper .sidebar .skills-container .aside-items-container .aside-item .aside-item-list .aside-item-text span {
+  color: white;
+}
+body .wrapper .sidebar .skills-container .aside-items-container .aside-item .aside-item-list .aside-item-text span sub {
+  color: #0091ff;
+}
+body .wrapper .sidebar .hobby-container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  background-color: #3b3b3b;
+}
+body .wrapper .sidebar .hobby-container .container-title {
+  display: grid;
+  grid-template-rows: 50px;
+  grid-template-columns: 35px auto;
+}
+body .wrapper .sidebar .hobby-container .container-title .title-point {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  background-color: #c5d7d7;
+  clip-path: polygon(0% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%);
+}
+body .wrapper .sidebar .hobby-container .container-title .title-text {
+  display: grid;
+  height: 65%;
+  background-color: #62a6bd;
+  color: white;
+  padding-left: 20px;
+  font-size: 20px;
+  line-height: 40px;
+  font-weight: bold;
+  box-shadow: -10px 5px 12px 6px rgba(0, 0, 0, 0.7);
+}
+body .wrapper .sidebar .hobby-container .hobbies-icons-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 60px;
+  margin: 0px 15px 20px 15px;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+}
+body .wrapper .sidebar .hobby-container .hobbies-icons-container .hobbies-item {
+  display: grid;
+  width: 60px;
+  height: 60px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0px 5px 0px 5px;
+}
+body .wrapper .sidebar .hobby-container .hobbies-icons-container .guitar {
+  background-image: url(images/guitar.png);
+}
+body .wrapper .sidebar .hobby-container .hobbies-icons-container .writer {
+  background-image: url(images/typewriter.png);
+}
+body .wrapper .sidebar .hobby-container .hobbies-icons-container .dog {
+  background-image: url(images/dog.png);
+}
+body .wrapper .sidebar .hobby-container .hobbies-icons-container .books {
+  background-image: url(images/book.png);
+}
 
 /*# sourceMappingURL=style.css.map */
