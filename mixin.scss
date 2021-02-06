@@ -32,3 +32,174 @@
         }
     }
 }
+
+@mixin photoContainer {
+    .photo-container {
+        display: grid;
+        width: 100%;
+        padding-top: 100%;
+        background-color: #272f43;
+        position: relative;
+
+        .photo {
+            display: grid;
+            position: absolute;
+            justify-self: center;
+            align-self: center;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 10px solid #008fcc;
+            // background-image: url(images/01-1-sht.JPG);
+            background-position-y: center;
+            background-position-x: 27%;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+@mixin contactsContainer {
+    .contacts-container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        background-color: #3b3b3b;
+        
+        @include containerTitle;
+
+        .aside-items-container {
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+            margin-bottom: 20px;
+
+            .aside-item {
+                display: grid;
+                grid-template-columns: 25px auto;
+                grid-template-rows: 35px;
+                align-items: center;
+                margin-left: 35px;
+
+                .aside-item-img {
+                    display: grid;
+                    height: 25px;
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+
+                .address {
+                    background-image: url(images/house.png);
+                }
+                .phone {
+                    background-image: url(images/telephone.png);
+                }
+                .mail {
+                    background-image: url(images/mail.png);
+                }
+                .linked-in {
+                    background-image: url(images/linkedin.png);
+                }
+
+                .aside-item-text {
+                    font-size: 14px;
+                    padding-left: 10px;
+
+                    a {
+                        color: white;
+                        text-decoration: none;
+                    }
+                }
+
+                
+            }               
+        }
+    }
+}
+
+@mixin skillsContainer {
+    .skills-container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        background-color: #3b3b3b;
+        
+        @include containerTitle;
+
+        .aside-items-container {
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+            margin-bottom: 20px;
+
+            .aside-item {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: auto;
+                align-items: center;
+                margin-left: 50px;
+
+                .aside-item-list {
+                    list-style-type: square;
+                    color: #0264ad;
+                    
+                    .aside-item-text {
+                        font-size: 14px;
+                        line-height: 35px;
+
+                        span {
+                            color: white;
+
+                            sub {
+                                color: #0091ff;
+                            }
+                        }
+                    }                       
+                }                    
+            }
+        }                
+    }
+}
+
+@mixin hobbyContainer {
+    .hobby-container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        background-color: #3b3b3b;
+
+        @include containerTitle;
+
+        .hobbies-icons-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-template-rows: 50px;
+            margin: 0px 15px 20px 15px;
+            @include fullAlign;
+
+            .hobbies-item {
+                display: grid;
+                width: 50px;
+                height: 50px;
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                margin: 0px 5px 0px 5px;
+            }
+
+            .guitar {
+                background-image: url(images/guitar.png);
+            }
+            .writer {
+                background-image: url(images/typewriter.png);
+            }
+            .dog {
+                background-image: url(images/dog.png);
+            }
+            .books {
+                background-image: url(images/book.png);
+            }
+        }
+    }
+}

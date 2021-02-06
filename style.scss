@@ -9,7 +9,7 @@ body {
 
     .wrapper {
         display: grid;
-        width: 100%;
+        max-width: 100%;
         grid-template-columns: 350px auto;
         grid-template-rows: auto;
         @media (max-width: 765px) {
@@ -17,174 +17,78 @@ body {
         }
         padding: 20px;
 
+        .sidebar-arrow {
+            display: grid;
+            width: 35px;
+            height: 75px;
+            clip-path: polygon(0 0, 100% 20%, 100% 80%, 0% 100%);
+            position: fixed;
+            top: 40px;
+            left: 0px;
+            background-image: url(images/right-chevron.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-color: #272f43;
+            z-index: 10;            
+            transition: all 1s ease-in-out;
+            border-right: 5px solid #008fcc;
+            @media (min-width: 765px) {
+                display: none;
+            }
+        }
+        .to-left-arrow {
+            clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
+            background-image: url(images/left-chevron.png);
+            border-left: 5px solid #008fcc;
+            border-right: none;
+            left: 0;
+            right: -40px;
+            transform: translateX(-60px);
+            margin-left: auto;
+            transition: all 1s ease-in-out;
+        }
+
         .sidebar {
             display: grid;
             grid-template-columns: auto;
             grid-template-rows: auto auto auto auto auto;
             box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
-
-            .photo-container {
-                display: grid;
-                width: 100%;
-                padding-top: 100%;
-                background-color: #272f43;
-                position: relative;
-
-                .photo {
-                    display: grid;
-                    position: absolute;
-                    justify-self: center;
-                    align-self: center;
-                    width: 250px;
-                    height: 250px;
-                    border-radius: 50%;
-                    border: 10px solid #008fcc;
-                    // background-image: url(images/01-1-sht.JPG);
-                    background-position-y: center;
-                    background-position-x: 27%;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                }
+            border-top: 10px solid #008fcc;
+            @media (max-width: 765px) {
+                display: none;
             }
 
-            .contacts-container {
-                display: grid;
-                grid-template-columns: auto;
-                grid-template-rows: auto auto;
-                background-color: #3b3b3b;
-                
-                @include containerTitle;
+            @include photoContainer;
+            @include contactsContainer;
+            @include skillsContainer;
+            @include hobbyContainer;
+        }
 
-                .aside-items-container {
-                    display: grid;
-                    grid-template-columns: auto;
-                    grid-template-rows: auto;
-                    margin-bottom: 20px;
-
-                    .aside-item {
-                        display: grid;
-                        grid-template-columns: 25px auto;
-                        grid-template-rows: 35px;
-                        align-items: center;
-                        margin-left: 35px;
-
-                        .aside-item-img {
-                            display: grid;
-                            height: 25px;
-                            background-position: center;
-                            background-size: contain;
-                            background-repeat: no-repeat;
-                        }
-
-                        .address {
-                            background-image: url(images/house.png);
-                        }
-                        .phone {
-                            background-image: url(images/telephone.png);
-                        }
-                        .mail {
-                            background-image: url(images/mail.png);
-                        }
-                        .linked-in {
-                            background-image: url(images/linkedin.png);
-                        }
-
-                        .aside-item-text {
-                            font-size: 14px;
-                            padding-left: 10px;
-
-                            a {
-                                color: white;
-                                text-decoration: none;
-                            }
-                        }
-
-                        
-                    }               
-                }
+        .mobile-sidebar {
+            display: grid;
+            position: relative;
+            left: -105%;
+            visibility: hidden;
+            grid-template-columns: auto;
+            grid-template-rows: auto auto auto auto auto;
+            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+            border-top: 10px solid #008fcc;            
+            transition: all 1s ease-in-out;
+            @media (min-width: 765px) {
+                display: none;
             }
 
-            .skills-container {
-                display: grid;
-                grid-template-columns: auto;
-                grid-template-rows: auto auto;
-                background-color: #3b3b3b;
-                
-                @include containerTitle;
+            @include photoContainer;
+            @include contactsContainer;
+            @include skillsContainer;
+            @include hobbyContainer;
+        }
 
-                .aside-items-container {
-                    display: grid;
-                    grid-template-columns: auto;
-                    grid-template-rows: auto;
-                    margin-bottom: 20px;
-
-                    .aside-item {
-                        display: grid;
-                        grid-template-columns: auto;
-                        grid-template-rows: auto;
-                        align-items: center;
-                        margin-left: 50px;
-    
-                        .aside-item-list {
-                            list-style-type: square;
-                            color: #0264ad;
-                            
-                            .aside-item-text {
-                                font-size: 14px;
-                                line-height: 35px;
-
-                                span {
-                                    color: white;
-
-                                    sub {
-                                        color: #0091ff;
-                                    }
-                                }
-                            }                       
-                        }                    
-                    }
-                }                
-            }
-
-            .hobby-container {
-                display: grid;
-                grid-template-columns: auto;
-                grid-template-rows: auto;
-                background-color: #3b3b3b;
-
-                @include containerTitle;
-
-                .hobbies-icons-container {
-                    display: grid;
-                    grid-template-columns: auto auto auto auto;
-                    grid-template-rows: 60px;
-                    margin: 0px 15px 20px 15px;
-                    @include fullAlign;
-
-                    .hobbies-item {
-                        display: grid;
-                        width: 60px;
-                        height: 60px;
-                        background-position: center;
-                        background-size: contain;
-                        background-repeat: no-repeat;
-                        margin: 0px 5px 0px 5px;
-                    }
-
-                    .guitar {
-                        background-image: url(images/guitar.png);
-                    }
-                    .writer {
-                        background-image: url(images/typewriter.png);
-                    }
-                    .dog {
-                        background-image: url(images/dog.png);
-                    }
-                    .books {
-                        background-image: url(images/book.png);
-                    }
-                }
-            }
+        .mobile-sidebar-active {
+            visibility: visible;
+            transform: translateX(105%);
+            transition: all 1s ease-in-out;
         }
     }
 }
