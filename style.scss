@@ -447,5 +447,32 @@ body {
                 transition: all 0.3s ease-in-out;
             }
         }
+
+        .main-container-hidden {
+            display: none;
+        }
     }
+
+    .greetings-modal {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        @include fullAlign;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #00386d;
+        color: #00b3ff;
+        font-size: 36px;
+        visibility: visible;
+        opacity: 1;
+    }
+    .greetings-modal-hidden {
+        visibility: hidden;
+        opacity: 0;
+        transition: all 1s;
+    }
+
 }
