@@ -50,7 +50,7 @@
             height: 250px;
             border-radius: 50%;
             border: 10px solid #008fcc;
-            // background-image: url(images/01-1-sht.JPG);
+            background-image: url(images/01-1-sht.JPG);
             background-position-y: center;
             background-position-x: 27%;
             background-size: cover;
@@ -109,6 +109,12 @@
                     a {
                         color: white;
                         text-decoration: none;
+                        transition: all 0.3s;
+                    }
+
+                    a:hover {
+                        color: #62a6bd;
+                        transition: all 0.3s;
                     }
                 }
 
@@ -138,7 +144,7 @@
                 grid-template-columns: auto;
                 grid-template-rows: auto;
                 align-items: center;
-                margin-left: 50px;
+                margin-left: 55px;
 
                 .aside-item-list {
                     list-style-type: square;
