@@ -699,6 +699,7 @@ body .wrapper .job-container .company .position {
 body .wrapper .job-container .company .duties {
   display: grid;
   margin-left: 15px;
+  align-items: center;
 }
 body .wrapper .job-container .company .duties summary {
   display: grid;
